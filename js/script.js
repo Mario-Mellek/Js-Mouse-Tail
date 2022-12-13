@@ -1,4 +1,5 @@
-let imgArr = [
+// Defining global variables
+const imgArr = [
   '😀',
   '😃',
   '😄',
@@ -54,7 +55,12 @@ let imgArr = [
   '😡',
 ];
 const container = document.getElementById('container');
+const animation = document.querySelector('div:first-of-type');
 
+/* 
+Mouse-tail function listens to a mousemove and creates a span with random images,
+ positions the span and removes it after 3 seconds
+*/
 function mouseTail() {
   document.addEventListener('mousemove', (e) => {
     let emojiEle = document.createElement('span');
@@ -72,4 +78,5 @@ function mouseTail() {
   });
 }
 
-mouseTail();
+//function will run after the animation ends
+animation.addEventListener('animationend', mouseTail);
