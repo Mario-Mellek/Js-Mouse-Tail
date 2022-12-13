@@ -32,6 +32,7 @@ div:first-of-type {
   background-color: rgb(36, 35, 35);
   border-radius: 50%;
   box-shadow: 50px 50px 50px black;
+  animation: bounce-in-right 2s ease forwards;
 }
 @keyframes effect {
   0% {
@@ -46,10 +47,6 @@ div:first-of-type {
     translate: 0 80px;
     opacity: 0;
   }
-}
-
-div:first-of-type {
-  animation: bounce-in-right 2s ease forwards;
 }
 @keyframes bounce-in-right {
   0% {
