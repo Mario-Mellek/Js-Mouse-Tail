@@ -1,0 +1,41 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  pointer-events: none;
+}
+body {
+  display: flex;
+  flex-direction: column;
+}
+#container {
+  background-color: grey;
+  min-height: 95vh;
+  /* overflow: hidden; */
+}
+h1 {
+  text-align: center;
+}
+button {
+  width: fit-content;
+  margin: auto;
+}
+span {
+  font-size: xx-large;
+  position: absolute;
+  animation: effect 3s forwards infinite;
+}
+@keyframes effect {
+  0% {
+    translate: 0 0;
+    opacity: 0;
+  }
+  50% {
+    translate: 0 100px;
+    opacity: 1;
+  }
+  100% {
+    translate: 0 80px;
+    opacity: 0;
+  }
+}
