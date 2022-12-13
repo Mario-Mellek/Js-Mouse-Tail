@@ -7,14 +7,14 @@
 body {
   display: flex;
   flex-direction: column;
+  max-height: 100vh;
+  overflow: hidden;
+  background-color: grey;
+  align-items: center;
+  justify-content: center;
 }
 #container {
-  background-color: grey;
-  min-height: 95vh;
-  /* overflow: hidden; */
-}
-h1 {
-  text-align: center;
+  height: 96vh;
 }
 button {
   width: fit-content;
@@ -24,6 +24,14 @@ span {
   font-size: xx-large;
   position: absolute;
   animation: effect 3s forwards infinite;
+}
+div:first-of-type {
+  width: 500px;
+  color: white;
+  text-align: center;
+  background-color: rgb(36, 35, 35);
+  border-radius: 50%;
+  box-shadow: 50px 50px 50px black;
 }
 @keyframes effect {
   0% {
@@ -37,5 +45,25 @@ span {
   100% {
     translate: 0 80px;
     opacity: 0;
+  }
+}
+
+div:first-of-type {
+  animation: bounce-in-right 2s ease forwards;
+}
+@keyframes bounce-in-right {
+  0% {
+    opacity: 0;
+    transform: translateX(2000px);
+  }
+  60% {
+    opacity: 1;
+    transform: translateX(-30px);
+  }
+  80% {
+    transform: translateX(10px);
+  }
+  100% {
+    transform: translateX(0);
   }
 }
